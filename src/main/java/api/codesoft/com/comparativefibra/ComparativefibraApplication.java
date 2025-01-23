@@ -24,8 +24,8 @@ public class ComparativefibraApplication {
 				// Configuración de CORS
 				registry.addMapping("/**")
 						.allowedOrigins(
-								"https://tufibrarapida.es",
-								"https://tufibrarapida.com"
+								"https://ahorraconfibra.es",
+								"https://ahorraconfibra.com"
 						)
 						.allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS") // Métodos permitidos
 						.allowedHeaders("*") // Permitir todos los encabezados
