@@ -4,7 +4,8 @@ import api.codesoft.com.comparativefibra.model.Oferta;
 import api.codesoft.com.comparativefibra.repository.OfertaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
@@ -65,4 +66,13 @@ public class OfertaService {
         return Double.MAX_VALUE;  // Si el precio es nulo, también lo excluimos de la comparación
     }
 
+    // Nuevo método para obtener ofertas por proveedor
+    public List<Oferta> obtenerOfertasPorProveedor(String proveedor) {
+        return ofertaRepository.findByProveedor(proveedor);
+    }
+
+    // Método para obtener ofertas paginadas
+    public Page<Oferta> obtenerOfertasPaginadas(Pageable pageable) {
+        return ofertaRepository.findAll(pageable);
+    }
 }

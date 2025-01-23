@@ -59,4 +59,9 @@ public class Oferta implements Serializable {
     @JsonProperty("codigo_postal")
     private String codigoPostal;
 
+    public String getPrecio() {
+        return precio;
+    }
+
+
 }

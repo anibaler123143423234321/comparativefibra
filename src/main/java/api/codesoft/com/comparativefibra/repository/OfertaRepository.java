@@ -7,5 +7,7 @@ import java.util.List;
 
 public interface OfertaRepository extends JpaRepository<Oferta, Long> {
     List<Oferta> findByCodigoPostal(String codigoPostal);
+    List<Oferta> findByProveedor(String proveedor); // Nuevo método
+
 }
 

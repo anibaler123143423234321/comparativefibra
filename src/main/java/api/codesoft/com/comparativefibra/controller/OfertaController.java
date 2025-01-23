@@ -3,8 +3,10 @@ package api.codesoft.com.comparativefibra.controller;
 import api.codesoft.com.comparativefibra.model.Oferta;
 import api.codesoft.com.comparativefibra.service.OfertaService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.web.bind.annotation.*;
-
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import java.util.List;
 
 @RestController
@@ -42,6 +44,21 @@ public class OfertaController {
     @GetMapping("/ofertasMasBaratas")
     public List<Oferta> obtenerOfertasMasBaratas() {
         return ofertaService.obtenerOfertasMasBaratas();
+    }
+
+    // Endpoint para filtrar ofertas por proveedor
+    @GetMapping("/proveedor/{proveedor}")
+    public List<Oferta> obtenerOfertasPorProveedor(@PathVariable String proveedor) {
+        return ofertaService.obtenerOfertasPorProveedor(proveedor);
+    }
+
+    // Endpoint para obtener ofertas paginadas
+    @GetMapping("/todas")
+    public Page<Oferta> obtenerOfertasPaginadas(
+            @RequestParam(defaultValue = "0") int page,
+            @RequestParam(defaultValue = "10") int size) {
+        Pageable pageable = PageRequest.of(page, size);
+        return ofertaService.obtenerOfertasPaginadas(pageable);
     }
 
 }
