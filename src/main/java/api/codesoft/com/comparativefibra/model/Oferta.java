@@ -1,11 +1,13 @@
 package api.codesoft.com.comparativefibra.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
+import org.jsoup.Jsoup;
+import org.jsoup.safety.Safelist;
 
 import java.io.Serializable;
 
@@ -56,9 +58,5 @@ public class Oferta implements Serializable {
     @Column(name = "codigo_postal")
     @JsonProperty("codigo_postal")
     private String codigoPostal;
-
-    public String getPrecio() {
-        return precio;
-    }
 
 }
