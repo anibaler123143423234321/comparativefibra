@@ -16,21 +16,5 @@ public class ComparativefibraApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(ComparativefibraApplication.class, args);
 	}
-	@Bean
-	public WebMvcConfigurer corsConfigurer() {
-		return new WebMvcConfigurer() {
-			@Override
-			public void addCorsMappings(CorsRegistry registry) {
-				// Configuración de CORS
-				registry.addMapping("/**")
-						.allowedOrigins(
-								"https://ahorraconfibra.es",
-								"https://ahorraconfibra.com"
-						)
-						.allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS") // Métodos permitidos
-						.allowedHeaders("*") // Permitir todos los encabezados
-						.allowCredentials(true); // Permitir credenciales si es necesario
-			}
-		};
-	}
+
 }

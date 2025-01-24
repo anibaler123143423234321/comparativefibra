@@ -10,11 +10,6 @@ import org.springframework.data.domain.Pageable;
 import java.util.List;
 
 @RestController
-@CrossOrigin(origins = {
-        "https://tufibrarapida.es",
-        "https://tufibrarapida.com",
-        "http://localhost:4321"
-})
 @RequestMapping("/ofertas")
 public class OfertaController {
 
@@ -32,7 +27,6 @@ public class OfertaController {
     public List<Oferta> insertarOfertas(@RequestBody List<Oferta> ofertas) {
         return ofertaService.insertarOfertas(ofertas);  // Llamamos al servicio para insertar todas las ofertas
     }
-
 
     // Endpoint para filtrar ofertas por código postal
     @GetMapping("/filtro/{codigoPostal}")
@@ -57,9 +51,13 @@ public class OfertaController {
     public Page<Oferta> obtenerOfertasPaginadas(
             @RequestParam(defaultValue = "0") int page,
             @RequestParam(defaultValue = "10") int size) {
+        // Agregar console log para depurar los parámetros
+        System.out.println("Recibido GET en /ofertas/todas con los siguientes parámetros:");
+        System.out.println("Página: " + page);
+        System.out.println("Tamaño: " + size);
+
         Pageable pageable = PageRequest.of(page, size);
         return ofertaService.obtenerOfertasPaginadas(pageable);
     }
 
 }
-
