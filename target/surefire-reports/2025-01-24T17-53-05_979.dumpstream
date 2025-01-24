@@ -1,4 +1,4 @@
-# Created at 2025-01-24T17:51:43.726
+# Created at 2025-01-24T17:53:06.135
 Boot Manifest-JAR contains absolute paths in classpath 'D:\CREAR PROYECTO COMPARATIVO\comparativefibra\target\test-classes'
 Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
 'other' has different root
