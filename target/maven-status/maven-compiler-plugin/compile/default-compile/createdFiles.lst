@@ -1,8 +1,6 @@
 api\codesoft\com\comparativefibra\service\OfertaService.class
+api\codesoft\com\comparativefibra\ComparativefibraApplication$1.class
 api\codesoft\com\comparativefibra\ComparativefibraApplication.class
 api\codesoft\com\comparativefibra\repository\OfertaRepository.class
-api\codesoft\com\comparativefibra\security\SecurityConfig.class
 api\codesoft\com\comparativefibra\controller\OfertaController.class
-api\codesoft\com\comparativefibra\security\APIKeyAuthFilter.class
-api\codesoft\com\comparativefibra\utils\GlobalExceptionHandler.class
 api\codesoft\com\comparativefibra\model\Oferta.class
