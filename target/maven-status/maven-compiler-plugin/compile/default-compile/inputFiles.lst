@@ -2,4 +2,7 @@ D:\CREAR PROYECTO COMPARATIVO\comparativefibra\src\main\java\api\codesoft\com\co
 D:\CREAR PROYECTO COMPARATIVO\comparativefibra\src\main\java\api\codesoft\com\comparativefibra\controller\OfertaController.java
 D:\CREAR PROYECTO COMPARATIVO\comparativefibra\src\main\java\api\codesoft\com\comparativefibra\model\Oferta.java
 D:\CREAR PROYECTO COMPARATIVO\comparativefibra\src\main\java\api\codesoft\com\comparativefibra\repository\OfertaRepository.java
+D:\CREAR PROYECTO COMPARATIVO\comparativefibra\src\main\java\api\codesoft\com\comparativefibra\security\APIKeyAuthFilter.java
+D:\CREAR PROYECTO COMPARATIVO\comparativefibra\src\main\java\api\codesoft\com\comparativefibra\security\SecurityConfig.java
 D:\CREAR PROYECTO COMPARATIVO\comparativefibra\src\main\java\api\codesoft\com\comparativefibra\service\OfertaService.java
+D:\CREAR PROYECTO COMPARATIVO\comparativefibra\src\main\java\api\codesoft\com\comparativefibra\utils\GlobalExceptionHandler.java
